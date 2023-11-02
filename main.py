@@ -1,15 +1,5 @@
 from DBHelper import DBHelper
 
-# helper=DBHelper()
-# # helper.insert_user(452,"Yash","123422")
-# # helper.insert_user(142,"Yashi","12342")
-# # helper.insert_user(152,"Yasha","12422")
-# # helper.fetch_all()
-# # helper.delete_user(142)
-# helper.update_user(452,"Swami")
-# helper.fetch_all()
-
-
 def main():
     
     ch = int(input("0 : New Database \n1 : Existing Database \n"))
