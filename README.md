@@ -98,6 +98,6 @@ If you wish to contribute to this project, feel free to fork the repository, mak
 
 ## Acknowledgments
 
-<h2><a href="https://dev.mysql.com/doc/">MySQL Documentation</a></h2>
-- [Python MySQL Connector Documentation](https://dev.mysql.com/doc/connector-python/en/)
+# MySQL Documentation : https://dev.mysql.com/doc/
+# Python MySQL Connector Documentation : https://dev.mysql.com/doc/connector-python/en/
 
