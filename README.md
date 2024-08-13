@@ -24,8 +24,8 @@ This project is a Python-based database management system using MySQL as the bac
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/Prathamesh1407/MySQL-with-Python.git
+    cd MySQL-with-Python
     ```
 
 2. **Install the required Python package**:
@@ -69,7 +69,7 @@ These are your Exisiting Databases
 [... list of databases ...]
 
 Enter the Existing Database name 
-testdb
+[... Database Name ...]
 0 : New Table 
 1 : Existing Table 
 1
@@ -77,7 +77,8 @@ These are your Exisiting Tables
 [... list of tables ...]
 
 Enter the Table name 
-users
+[... Table Name ...]
+
 1:Insert
 2:Display All user
 3:Delete user
