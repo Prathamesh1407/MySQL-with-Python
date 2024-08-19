@@ -89,8 +89,7 @@ Enter the Table name
 8.Remove Attribute
 9.Foreign Key
 10.Exit
-
-
+```
 
 ## Contributing
 
@@ -98,6 +97,6 @@ If you wish to contribute to this project, feel free to fork the repository, mak
 
 ## Acknowledgments
 
-# MySQL Documentation : https://dev.mysql.com/doc/
-# Python MySQL Connector Documentation : https://dev.mysql.com/doc/connector-python/en/
+-[MySQL Documentation](https://dev.mysql.com/doc/)\
+-[Python MySQL Connector Documentation](https://dev.mysql.com/doc/connector-python/en/)
 
