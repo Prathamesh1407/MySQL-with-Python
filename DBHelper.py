@@ -1,8 +1,5 @@
 import mysql.connector as connector
 
-# query='create table if not exists user(userId int primary key,userName varchar(200),phone varchar(12))'
-
-
 class DBHelper:
     def __init__(self, ch, pword):
         self.con = connector.connect(
@@ -44,7 +41,7 @@ class DBHelper:
         cur = self.con.cursor()
         cur.execute(query1, ipt)
         self.con.commit()
-        print("-----------Saved to db------------")
+        print("-----------Inserted In DB------------")
 
     def fetch_all(self, tname):
         col = self.showColumns(tname)
@@ -69,7 +66,7 @@ class DBHelper:
         cur = self.con.cursor()
         cur.execute(query)
         self.con.commit()  # if we do not commit it the data will get delete temporarily
-        print("----------Deleted-----------")
+        print("----------Deleted from DB-----------")
 
     def update_user(self, tname):
         self.fetch_all(tname)
@@ -133,7 +130,7 @@ class DBHelper:
     def add(self, count, table):
         while count > 0:
             query = "alter table {} add column {} {}".format(
-                table, input("Enter column name"), input("Enter Data type of column")
+                table, input("Enter column name "), input("Enter Data type of column ")
             )
             cur = self.con.cursor()
             cur.execute(query)
@@ -155,13 +152,24 @@ class DBHelper:
         query = "alter table {} add constraint {} ({})".format(tname, pname, cname)
         cur.execute(query)
         cur.close()
-        print("---------Attribute Added---------")
+        print("---------Constraint Added---------")
 
     def delAtri(self, tname):
         cur = self.con.cursor()
-        pname = input("Enter constraint to be deleted ")
-        query = "alter table {} drop {}".format(tname, pname)
+        pname = input("Enter column name in which you want to delete the constraint ")
+        query = "alter table {} drop constraint {}".format(tname, pname)
         print(query)
         cur.execute(query)
         cur.close()
-        print("---------Attribute Removed---------")
+        print("---------Constraint Removed---------")
+        
+    def forKey(self,tname):
+        self.printTables()
+        cur=self.con.cursor()
+        pname=input("Enter existing table you want to apply foreign key (parent table) ")
+        pcname=input("Enter the column name that's primary key you want to point (parent table column) ")
+        cname=input("Enter name of child table or current table")
+        query="alter table {} add foreign key ({}) references {} ({})".format(tname,cname,pname,pcname)
+        cur.execute(query)
+        cur.close()
+
